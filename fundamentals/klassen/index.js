@@ -27,9 +27,18 @@ class Human {
   }
 }
 
+class User extends Human {
+  printUsername() {
+    console.log(this.#getFullname());
+  }
+}
+
 const lydia = new Human('Lydia', 'Schmitt');
 console.log(lydia.fullname);
 console.log(lydia.firstname);
 lydia.firstname = 'lydy';
 
 console.log(lydia.fullname);
+
+const angelika = new User('Angelika', 'Huber');
+// angelika.printUsername(); // SyntaxError

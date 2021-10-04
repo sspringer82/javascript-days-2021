@@ -44,3 +44,4 @@ node index.js
   - Immutability Helper: https://github.com/kolodny/immutability-helper
   - Immer: https://github.com/immerjs/immer
   - Immutable.js: https://immutable-js.com/
+- TC39 proposals: https://github.com/tc39/proposals
