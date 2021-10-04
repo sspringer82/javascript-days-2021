@@ -33,3 +33,21 @@ doItAsync()
   .catch((error) => {
     console.error('OH NO: ', error);
   });
+
+// Promise.all([
+//   doItAsync(),
+//   doItAsync(),
+//   doItAsync(),
+//   doItAsync(),]).then((values) => {
+// Promise.race([doItAsync(), doItAsync(), doItAsync(), doItAsync()]).then(
+Promise.allSettled([
+  doItAsync(),
+  doItAsync(true),
+  doItAsync(),
+  doItAsync(),
+]).then((values) => {
+  console.log('all: ', values);
+});
+
+// console.log(Promise.resolve('foo'));
+// console.log(Promise.reject('foo'));
