@@ -4,15 +4,15 @@ async function getData() {
   return data;
 }
 
-async function renderData() {
-  const data = await getData();
-
-  data.forEach(({ name }) => {
-    const parent = document.createElement('div');
-    const child = document.createElement('span');
-    child.innerText = name;
-    parent.appendChild(child);
-    document.querySelector('body').appendChild(parent);
+function renderData() {
+  const data = getData().then((data) => {
+    data.forEach(({ name }) => {
+      const parent = document.createElement('div');
+      const child = document.createElement('span');
+      child.innerText = name;
+      parent.appendChild(child);
+      document.querySelector('body').appendChild(parent);
+    });
   });
 }
 
