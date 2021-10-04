@@ -1,4 +1,6 @@
-export default class User {
+import Greetable from './greetable';
+
+export default class User implements Greetable {
   private age: number;
   constructor(
     private firstname: string,

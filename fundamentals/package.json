@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Sebastian Springer<sebastian.springer@maibornwolff.de>",
+  "twitter": "@basti_springer",
   "license": "ISC"
 }

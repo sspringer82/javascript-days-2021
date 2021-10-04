@@ -1,8 +1,5 @@
+import Greetable from './greetable';
 import User from './user';
-
-interface Greetable {
-  getInfo: () => string;
-}
 
 let s: string | number = 'Hallo Welt';
 s = 32;
@@ -22,3 +19,43 @@ function greet(greetable: Greetable): string {
 }
 console.log(greet(klaus));
 console.log(greet(bello));
+
+// types
+type Human = {
+  firstname: string;
+};
+
+function sayHello(h: Human): void {
+  console.log(`Hello ${h.firstname}`);
+}
+
+sayHello({ firstname: 'Ingo' });
+
+// enum
+
+enum Food {
+  orange = 'Orange',
+  banana = 'Banana',
+  apple = 'Apple',
+}
+
+const food: Food = Food.banana;
+
+function eat(f: Food) {
+  console.log(`eating: ${f}`);
+}
+
+eat(food);
+
+// alternative
+type Fruits = 'Orange' | 'Banana' | 'Apple';
+function eatFruit(f: Fruits) {
+  console.log(`eating: ${f}`);
+}
+eatFruit('Orange');
+
+async function getData(): Promise<User> {
+  return Promise.resolve(new User('Klaus', 'König', 42));
+}
+const klausi = getData();
+console.log(klaus.getInfo());

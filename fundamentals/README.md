@@ -49,3 +49,4 @@ node index.js
 - Async iterators: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of
 - TypeScript: https://www.typescriptlang.org/
 - Duck Typing: https://de.wikipedia.org/wiki/Duck-Typing
+- TS generics: https://www.typescriptlang.org/docs/handbook/2/generics.html
