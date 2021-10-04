@@ -4,13 +4,23 @@ export default function doItAsync(
   value = 'Hallo Welt',
   cb,
 ) {
-  setTimeout(() => {
-    if (cb) {
-      if (fail) {
-        cb(Error('Whoops'));
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (cb) {
+        // callbacks
+        if (fail) {
+          cb(Error('Whoops'));
+        } else {
+          cb(null, value);
+        }
       } else {
-        cb(null, value);
+        // promises
+        if (fail) {
+          reject(Error('Whoops'));
+        } else {
+          resolve(value);
+        }
       }
-    }
-  }, time);
+    }, time);
+  });
 }
