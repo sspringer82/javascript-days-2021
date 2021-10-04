@@ -25,3 +25,11 @@ function doSomethingWithNodes() {
   spanNodes[1].style.backgroundColor = 'blue';
   spanNodes[2].style.backgroundColor = 'hotpink';
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const button = document.querySelector('#btn');
+  console.log(button);
+  button.addEventListener('click', (event) => {
+    debugger;
+  });
+});

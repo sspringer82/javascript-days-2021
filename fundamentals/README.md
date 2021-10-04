@@ -46,3 +46,5 @@ node index.js
   - Immutable.js: https://immutable-js.com/
 - TC39 proposals: https://github.com/tc39/proposals
 - Trees: https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction?hl=de
+- Async iterators: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of
+- TypeScript: https://www.typescriptlang.org/
