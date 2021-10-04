@@ -64,3 +64,24 @@ console.log(result);
 
 // var: global, module, function, closure
 // let & const: global, module, function, closure, block
+
+function createObject() {
+  let value = 42;
+  return {
+    getValue() {
+      return value;
+    },
+    setValue(newValue) {
+      value = newValue;
+    },
+  };
+}
+
+const obj = createObject();
+console.log(obj.getValue()); // 42
+obj.setValue(123);
+console.log(obj.getValue()); // 123
+
+setTimeout(() => {
+  console.log(obj.getValue()); // 123
+}, 1000);
