@@ -1,50 +1,35 @@
 class Human {
-  firstname = '';
-  lastname = '';
+  #firstname = '';
+  #lastname = '';
 
   static legCount = 2;
 
   constructor(firstname, lastname) {
-    this.firstname = firstname;
-    this.lastname = lastname;
+    this.#firstname = firstname;
+    this.#lastname = lastname;
   }
 
-  getFullname() {
-    return `${this.firstname} ${this.lastname}`;
+  #getFullname() {
+    return `${this.#firstname} ${this.#lastname}`;
   }
 
-  static createNewHuman(firstname, lastname) {
-    return new this(firstname, lastname);
-  }
-}
-
-class User extends Human {
-  id = 0;
-
-  constructor(firstname, lastname, id) {
-    super(firstname, lastname);
-    this.id = id;
+  get fullname() {
+    return this.#getFullname();
   }
 
-  toString() {
-    return `${this.getFullname()} - ${this.id}`;
+  set firstname(value) {
+    console.log('set firstname');
+    this.#firstname = value;
+  }
+
+  get firstname() {
+    return this.#firstname;
   }
 }
 
-const claudia = new Human('Claudia', 'Berger');
+const lydia = new Human('Lydia', 'Schmitt');
+console.log(lydia.fullname);
+console.log(lydia.firstname);
+lydia.firstname = 'lydy';
 
-console.log(claudia.getFullname());
-
-console.log(`Human leg count: ${Human.legCount}`);
-
-const bernhard = Human.createNewHuman('Bernhard', 'Bichler');
-
-console.log(bernhard.getFullname());
-
-const basti = new User('Sebastian', 'Springer', 18);
-
-console.log(basti.toString());
-
-const karl = User.createNewHuman('Karl', 'Müller');
-karl.id = 12;
-console.log(karl);
+console.log(lydia.fullname);
