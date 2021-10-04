@@ -4,16 +4,24 @@ async function getData() {
   return data;
 }
 
-function renderData() {
-  const data = getData().then((data) => {
-    data.forEach(({ name }) => {
-      const parent = document.createElement('div');
-      const child = document.createElement('span');
-      child.innerText = name;
-      parent.appendChild(child);
-      document.querySelector('body').appendChild(parent);
-    });
+async function renderData() {
+  const data = await getData();
+  data.forEach(({ name }) => {
+    const parent = document.createElement('div');
+    const child = document.createElement('span');
+    child.innerText = name;
+    parent.appendChild(child);
+    document.querySelector('body').appendChild(parent);
   });
+  doSomethingWithNodes();
 }
 
 renderData();
+
+function doSomethingWithNodes() {
+  const spanNodes = document.querySelectorAll('span');
+  console.log(spanNodes);
+  spanNodes[0].style.backgroundColor = 'red';
+  spanNodes[1].style.backgroundColor = 'blue';
+  spanNodes[2].style.backgroundColor = 'hotpink';
+}
