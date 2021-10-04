@@ -9,14 +9,14 @@ export default function doItAsync(
       if (cb) {
         // callbacks
         if (fail) {
-          cb(Error('Whoops'));
+          cb('Whoops');
         } else {
           cb(null, value);
         }
       } else {
         // promises
         if (fail) {
-          reject(Error('Whoops'));
+          reject('Whoops');
         } else {
           resolve(value);
         }
