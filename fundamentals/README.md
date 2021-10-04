@@ -33,3 +33,10 @@ node index.js
 - Entwicklungsumgebung
   - VSCode: https://code.visualstudio.com/
   - WebStorm: https://www.jetbrains.com/de-de/webstorm/
+- MDN https://developer.mozilla.org/
+- Styleguides
+  - https://github.com/airbnb/javascript
+- ESLint https://eslint.org/
+- Truthy + Falsy
+  - https://developer.mozilla.org/de/docs/Glossary/Truthy
+  - https://developer.mozilla.org/de/docs/Glossary/Falsy
