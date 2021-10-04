@@ -49,3 +49,16 @@ const obj = {
   firstname: 'Tim',
 };
 obj.doIt();
+
+function defaultParameters(a = 42, b = a + 10) {
+  console.log(a, b);
+  return a + b;
+}
+// Default parameter können an jeder stelle stehen
+// weiter hinten stehende defaults haben zugriff auf vorne stehende
+// kann manuell mit undefined getriggert werden
+
+console.log(defaultParameters());
+console.log(defaultParameters(14));
+console.log(defaultParameters(14, 14));
+console.log(defaultParameters(undefined, 14));
