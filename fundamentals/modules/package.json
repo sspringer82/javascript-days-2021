@@ -6,12 +6,14 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "start:web": "http-server ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "http-server": "^13.0.2",
     "lodash": "^4.17.21"
   }
 }
