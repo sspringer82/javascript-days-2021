@@ -1,13 +1,11 @@
-function getData() {
-  return [
-    { id: 1, name: 'Lisa' },
-    { id: 2, name: 'Klaus' },
-    { id: 3, name: 'Petra' },
-  ];
+async function getData() {
+  const response = await fetch('http://localhost:3000/people');
+  const data = await response.json();
+  return data;
 }
 
-function renderData() {
-  const data = getData();
+async function renderData() {
+  const data = await getData();
 
   data.forEach(({ name }) => {
     const parent = document.createElement('div');
