@@ -40,3 +40,7 @@ node index.js
 - Truthy + Falsy
   - https://developer.mozilla.org/de/docs/Glossary/Truthy
   - https://developer.mozilla.org/de/docs/Glossary/Falsy
+- Immutable Data structures
+  - Immutability Helper: https://github.com/kolodny/immutability-helper
+  - Immer: https://github.com/immerjs/immer
+  - Immutable.js: https://immutable-js.com/

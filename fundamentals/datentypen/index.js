@@ -154,7 +154,8 @@ const inputString = 'Hallo'; // by value
 const inputObj = { name: 'Ursula', address: { street: 'Sesamstraße' } }; // by reference
 
 function doIt(str, obj) {
-  const copy = { ...obj }; // achtung: nur flache kopie!
+  // const copy = { ...obj }; // achtung: nur flache kopie!
+  const copy = JSON.parse(JSON.stringify(obj)); // tiefe kopie - achtung - methoden gehen verloren
   str = 'asdf';
   // obj.name = 'jklö';
   copy.name = 'Dietmar';
