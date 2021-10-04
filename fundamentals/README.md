@@ -45,3 +45,4 @@ node index.js
   - Immer: https://github.com/immerjs/immer
   - Immutable.js: https://immutable-js.com/
 - TC39 proposals: https://github.com/tc39/proposals
+- Trees: https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction?hl=de
