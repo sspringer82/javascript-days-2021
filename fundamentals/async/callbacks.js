@@ -1,14 +1,4 @@
-function doItAsync(fail = false, time = 1000, value = 'Hallo Welt', cb) {
-  setTimeout(() => {
-    if (cb) {
-      if (fail) {
-        cb(Error('Whoops'));
-      } else {
-        cb(null, value);
-      }
-    }
-  }, time);
-}
+import doItAsync from './doItAsync.js';
 
 const result = doItAsync(
   undefined,
@@ -30,3 +20,16 @@ console.log(result);
 
 // console.log(add); // function object
 // console.log(add()); // function call
+
+doItAsync(undefined, undefined, undefined, (error, asyncValue) => {
+  if (error) {
+    throw error;
+  }
+  console.log('1: ', asyncValue);
+  doItAsync(undefined, undefined, undefined, (err, val) => {
+    console.log('2: ', val);
+    doItAsync(undefined, undefined, undefined, (e, v) => {
+      console.log('3: ', v);
+    });
+  });
+});
