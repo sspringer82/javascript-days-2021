@@ -32,3 +32,35 @@ console.log(v2);
 var v2 = '42';
 
 // Scoping - global, module, function, block, closure
+let global = 'foo'; // global - außerhalb eines Moduls, einer Funktion eines Blocks
+let moduleScope = 'bar'; // module - innerhalb eines Moduls - außerhalb einer Funktion/eines Blocks (einer Datei)
+
+function myFunction() {
+  let myFunctionVar = 'hallo'; // function scoped - toplevel in der Funktion
+  console.log(myFunctionVar);
+  if (true) {
+    let myBlockVar = 'Welt'; // block scoped - toplevel in einem Block
+    console.log(myFunctionVar + myBlockVar);
+  }
+  // console.log(myBlockVar); // ReferenceError
+}
+myFunction();
+// console.log(myFunctionVar); // ReferenceError
+
+function add(a, b) {
+  if (typeof a !== 'number' || typeof b !== 'number') {
+    throw new Error('Not a number');
+  }
+  return a + b;
+}
+
+let result = null;
+try {
+  result = add(1, '2');
+} catch (e) {
+  console.error('whoops');
+}
+console.log(result);
+
+// var: global, module, function, closure
+// let & const: global, module, function, closure, block
