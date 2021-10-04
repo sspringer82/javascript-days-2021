@@ -18,6 +18,12 @@ node index.js
 4. index.html im Browser öffnen
 5. DevTools öffnen (F12)
 
+## Debugging
+
+1. `node --inspect index.js` - Prozess läuft `node --inspect-brk index.js` - Break before first line
+2. Chrome öffnen chrome://inspect => remote target => inspect
+3. Happy Debugging
+
 ## Links
 
 - Packagemanager
