@@ -48,3 +48,4 @@ node index.js
 - Trees: https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction?hl=de
 - Async iterators: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of
 - TypeScript: https://www.typescriptlang.org/
+- Duck Typing: https://de.wikipedia.org/wiki/Duck-Typing
