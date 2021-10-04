@@ -38,3 +38,20 @@ const arr = new Array(10).fill(1).map((data, index) => {
   return data * index + 1;
 });
 console.log(arr);
+
+let count = 0;
+while (count < arr.length) {
+  // 0 - n mal
+  console.log(arr[count]);
+  count++;
+}
+
+let count2 = 0;
+do {
+  // 1 - n mal
+  console.log(arr[count2]);
+} while (count2++ < arr.length);
+
+for (let i = 0; i < arr.length; i++) {
+  console.log(arr[i]);
+}
