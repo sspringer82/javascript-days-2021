@@ -17,6 +17,7 @@
 - NPM Probleme unter Windows: https://www.com-magazin.de/tipps-tricks/powershell/windows-10-verweigert-ausfuehrung-powershell-skript-2546684.html
 - Nodemon: https://github.com/remy/nodemon
 - NPM Scripts: https://docs.npmjs.com/cli/v7/using-npm/scripts
+- npmtrends: https://www.npmtrends.com/
 
 ## Ausführung
 
