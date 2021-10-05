@@ -20,6 +20,7 @@
 - npmtrends: https://www.npmtrends.com/
 - OpenJS Foundation: https://openjsf.org/
 - Express: https://expressjs.com
+- Dissertation von Roy Fielding: https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm
 
 ## Ausführung
 
