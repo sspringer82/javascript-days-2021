@@ -9,17 +9,12 @@ const rl = createInterface({
 
 const tasks = getTasks();
 
-ask(tasks[0], rl)
-  .then((result) => {
+for (let i = 0; i < tasks.length; i++) {
+  try {
+    const result = await ask(tasks[i], rl);
     console.log(result);
-    return ask(tasks[1], rl);
-  })
-  .then((result) => {
-    console.log(result);
-  })
-  .catch((e) => {
+  } catch (e) {
     console.error(e);
-  })
-  .finally(() => {
-    rl.close();
-  });
+  }
+}
+rl.close();
