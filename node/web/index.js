@@ -1,11 +1,18 @@
 import express from 'express';
+import morgan from 'morgan';
+import { createWriteStream } from 'fs';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const app = express();
 
-app.use((req, res, next) => {
-  console.log(req.method, req.url);
-  next();
+const accessLogStream = createWriteStream(join(__dirname, 'access.log'), {
+  flags: 'a',
 });
+
+app.use(morgan('combined', { stream: accessLogStream }));
 
 app.get('/', (req, res) => {
   res.send('Hallo Client');
