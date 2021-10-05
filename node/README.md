@@ -21,6 +21,9 @@
 - OpenJS Foundation: https://openjsf.org/
 - Express: https://expressjs.com
 - Dissertation von Roy Fielding: https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm
+- Nestjs: https://nestjs.com/
+- TypeORM: https://typeorm.io/#/
+- Passport: http://www.passportjs.org/
 
 ## Ausführung
 

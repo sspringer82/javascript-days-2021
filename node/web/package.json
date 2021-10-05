@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "cross-env PORT=8181 node index.js",
     "start:dev": "nodemon index.js"
   },
   "keywords": [],
@@ -16,6 +16,7 @@
     "nodemon": "^2.0.13"
   },
   "dependencies": {
+    "cross-env": "^7.0.3",
     "express": "^4.17.1",
     "morgan": "^1.10.0"
   }

@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
 
 app.use('/addresses', addressRouter);
 
-const port = 8080;
+const port = process.env.PORT;
 
 app.listen(port, () =>
   console.log(`Server listens to http://localhost:${port}`),
