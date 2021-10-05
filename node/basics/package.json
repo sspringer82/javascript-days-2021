@@ -1,0 +1,16 @@
+{
+  "name": "basics",
+  "version": "0.1.0",
+  "description": "My fancy basics app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Sebastian Springer <sebastian.springer@maibornwolff.de>",
+  "license": "ISC",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
