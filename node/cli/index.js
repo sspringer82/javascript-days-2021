@@ -1,41 +1,25 @@
 import { createInterface } from 'readline';
+import ask from './ask.js';
+import getTasks from './task.js';
 
 const rl = createInterface({
   input: process.stdin,
   output: process.stdout,
 });
 
-const tasks = [
-  {
-    operands: [2, 2],
-    result: 4,
-  },
-  {
-    operands: [3, 2],
-    result: 5,
-  },
-];
+const tasks = getTasks();
 
-rl.question(
-  `What is ${tasks[0].operands[0]} + ${tasks[0].operands[1]}? `,
-  (answer) => {
-    const intAnswer = parseInt(answer, 10);
-    if (intAnswer === tasks[0].result) {
-      console.log('Awesome!');
-    } else {
-      console.log('Nope!');
-    }
-    rl.question(
-      `What is ${tasks[1].operands[0]} + ${tasks[1].operands[1]}? `,
-      (answer) => {
-        const intAnswer = parseInt(answer, 10);
-        if (intAnswer === tasks[1].result) {
-          console.log('Awesome!');
-        } else {
-          console.log('Nope!');
-        }
-        rl.close();
-      },
-    );
-  },
-);
+ask(tasks[0], rl)
+  .then((result) => {
+    console.log(result);
+    return ask(tasks[1], rl);
+  })
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((e) => {
+    console.error(e);
+  })
+  .finally(() => {
+    rl.close();
+  });
