@@ -3,7 +3,7 @@ import { createServer } from 'http';
 const server = createServer((req, res) => {
   if (req.method === 'GET' && req.url === '/') {
     res.end('Hallo Welt');
-  }}else {
+  } else {
     res.statusCode = 404;
     res.end('Not found');
   }
