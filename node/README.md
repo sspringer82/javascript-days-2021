@@ -14,6 +14,8 @@
 - Licensing: https://choosealicense.com/
 - Node License Finder: https://github.com/iandotkelly/nlf
 - Lodash: https://lodash.com/
+- NPM Probleme unter Windows: https://www.com-magazin.de/tipps-tricks/powershell/windows-10-verweigert-ausfuehrung-powershell-skript-2546684.html
+- Nodemon: https://github.com/remy/nodemon
 
 ## Ausführung
 
