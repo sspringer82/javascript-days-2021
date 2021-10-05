@@ -16,11 +16,18 @@
 - Lodash: https://lodash.com/
 - NPM Probleme unter Windows: https://www.com-magazin.de/tipps-tricks/powershell/windows-10-verweigert-ausfuehrung-powershell-skript-2546684.html
 - Nodemon: https://github.com/remy/nodemon
+- NPM Scripts: https://docs.npmjs.com/cli/v7/using-npm/scripts
 
 ## Ausführung
 
 1. REPL: `node`
 2. Ausführung mit einer Datei: `node index.js`
+
+### Nodemon
+
+1. `npm run start:watch` (mit start:watch als script in der package.json)
+2. `npx nodemon index.js`
+3. `nodemon index.js` (mit global installiertem nodemon)
 
 ## Initialisierung
 

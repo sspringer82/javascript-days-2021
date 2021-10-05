@@ -4,7 +4,9 @@
   "description": "My fancy basics app",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "start:debug": "node --inspect-brk index.js",
+    "start:watch": "nodemon index.js"
   },
   "author": "Sebastian Springer <sebastian.springer@maibornwolff.de>",
   "license": "ISC",
@@ -12,5 +14,8 @@
   "type": "module",
   "dependencies": {
     "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
   }
 }
