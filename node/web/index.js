@@ -1,15 +1,19 @@
-import { createServer } from 'http';
+import express from 'express';
 
-const server = createServer((req, res) => {
-  if (req.method === 'GET' && req.url === '/') {
-    res.end('Hallo Welt');
-  } else {
-    res.statusCode = 404;
-    res.end('Not found');
-  }
+const app = express();
+
+app.use((req, res, next) => {
+  console.log(req.method, req.url);
+  next();
+});
+
+app.get('/', (req, res) => {
+  res.send('Hallo Client');
+  // res.json({ firstname: 'Claudia', lastname: 'Meier' });
 });
 
 const port = 8080;
-server.listen(port, () =>
+
+app.listen(port, () =>
   console.log(`Server listens to http://localhost:${port}`),
 );

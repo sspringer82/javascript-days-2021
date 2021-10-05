@@ -18,6 +18,8 @@
 - Nodemon: https://github.com/remy/nodemon
 - NPM Scripts: https://docs.npmjs.com/cli/v7/using-npm/scripts
 - npmtrends: https://www.npmtrends.com/
+- OpenJS Foundation: https://openjsf.org/
+- Express: https://expressjs.com
 
 ## Ausführung
 
