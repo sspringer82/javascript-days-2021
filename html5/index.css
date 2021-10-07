@@ -1,4 +1,8 @@
 form fieldset label span {
-    display: inline-block;
-    width: 100px;
+  display: inline-block;
+  width: 100px;
+}
+
+td {
+  background-color: whitesmoke;
 }

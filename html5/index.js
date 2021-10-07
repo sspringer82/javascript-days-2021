@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     pwForm.style.display = 'none';
   });
 
-  document.getElementById('new').addEventListener('click', () => {
+  newButton.addEventListener('click', () => {
     pwForm.setAttribute('id', '');
     pwList.style.display = 'none';
     newButton.style.display = 'none';
