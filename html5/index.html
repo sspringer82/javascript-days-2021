@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="index.js" type="module"></script>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div id="list"></div>
+    <form style="display: none" id="form">
+      <input type="hidden" name="id" id="id" />
+      <fieldset>
+        <label>
+          <span>Username:</span>
+          <input type="text" name="username" id="username" />
+        </label>
+      </fieldset>
+      <fieldset>
+        <label>
+          <span>Password:</span>
+          <input type="password" name="password" id="password" />
+        </label>
+      </fieldset>
+      <fieldset>
+        <label>
+          <span>URL:</span>
+          <input type="text" name="url" id="url" />
+        </label>
+      </fieldset>
+      <fieldset>
+        <label>
+          <span>Notes:</span>
+          <textarea name="notes" id="notes"></textarea>
+        </label>
+      </fieldset>
+      <fieldset>
+        <button type="submit">save</button>
+        <button id="cancel">cancel</button>
+      </fieldset>
+    </form>
+
+    <button id="new">new</button>
+  </body>
+</html>

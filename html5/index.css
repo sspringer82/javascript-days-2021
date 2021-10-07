@@ -1,0 +1,4 @@
+form fieldset label span {
+    display: inline-block;
+    width: 100px;
+}
