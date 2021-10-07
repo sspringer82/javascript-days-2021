@@ -17,3 +17,4 @@
 - WebXR Example: https://www.xrdinosaurs.com/
 - HTML5 Input types: https://developer.mozilla.org/en-US/docs/Learn/Forms/HTML5_input_types
 - HTML5 Attribute: https://developer.mozilla.org/de/docs/Web/HTML/Element/Input
+- Constraint Validation API: https://developer.mozilla.org/en-US/docs/Web/API/Constraint_validation

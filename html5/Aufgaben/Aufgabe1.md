@@ -10,4 +10,4 @@ Das Passwort muss:
 - min 1 sonderzeichen
 - min 8 zeichen lang
 
-** Hinweis ** https://developer.mozilla.org/de/docs/Web/HTML/Element/Input
+**Hinweis** https://developer.mozilla.org/de/docs/Web/HTML/Element/Input
