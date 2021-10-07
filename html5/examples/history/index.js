@@ -9,4 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 window.onpopstate = (e) => {
   console.log(e);
+  if (e.state === 'data') {
+    // Zeige die Liste an
+  }
 };

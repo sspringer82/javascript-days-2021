@@ -11,6 +11,13 @@ class Form extends HTMLElement {
 
     shadowRoot.appendChild(templateContent.cloneNode(true));
 
+    const cancelButton = shadowRoot.querySelector('#cancel');
+    cancelButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      shadowRoot.getElementById('form').reset();
+      history.back();
+    });
+
     shadowRoot.getElementById('form').addEventListener('submit', (e) => {
       e.preventDefault();
 
