@@ -1,6 +1,6 @@
 # Agenda (unser Plan für heute)
 
-- Formulare
+- Formulare ✔
 - Web Components
 - History API
 - Local Storage
