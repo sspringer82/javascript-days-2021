@@ -15,3 +15,5 @@
 - Secure Context: https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts
 - Features im Secure Context: https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts
 - WebXR Example: https://www.xrdinosaurs.com/
+- HTML5 Input types: https://developer.mozilla.org/en-US/docs/Learn/Forms/HTML5_input_types
+- HTML5 Attribute: https://developer.mozilla.org/de/docs/Web/HTML/Element/Input
