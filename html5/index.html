@@ -9,46 +9,52 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <div id="list"></div>
-    <form style="display: none" id="form" autocomplete="off">
-      <input type="hidden" name="id" id="id" />
-      <fieldset>
-        <label>
-          <span>Username:</span>
-          <input type="text" name="username" id="username" required />
-        </label>
-      </fieldset>
-      <fieldset>
-        <label>
-          <span>Password:</span>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            required
-            title="Mindestens 1 Kleinbuchstabe, mindestens 1 Großbuchstabe, mindestens 1 Zahl, mindestens 1 Sonderzeichen, mindestens 8 Zeichen lang"
-            pattern="^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,}$"
-          />
-        </label>
-      </fieldset>
-      <fieldset>
-        <label>
-          <span>URL:</span>
-          <input type="url" name="url" id="url" required />
-        </label>
-      </fieldset>
-      <fieldset>
-        <label>
-          <span>Notes:</span>
-          <textarea name="notes" id="notes"></textarea>
-        </label>
-      </fieldset>
-      <fieldset>
-        <button type="submit">save</button>
-        <button id="cancel">cancel</button>
-      </fieldset>
-    </form>
+    <pw-list></pw-list>
+    <pw-form style="display: none"></pw-form>
 
     <button id="new">new</button>
+
+    <template id="listTemplate">
+      <div id="list"></div>
+    </template>
+    <template id="formTemplate">
+      <form id="form" autocomplete="off">
+        <input type="hidden" name="id" id="id" />
+        <fieldset>
+          <label>
+            <span>Username:</span>
+            <input type="text" name="username" id="username" required />
+          </label>
+        </fieldset>
+        <fieldset>
+          <label>
+            <span>Password:</span>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              required
+              pattern="^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,}$"
+            />
+          </label>
+        </fieldset>
+        <fieldset>
+          <label>
+            <span>URL:</span>
+            <input type="url" name="url" id="url" required />
+          </label>
+        </fieldset>
+        <fieldset>
+          <label>
+            <span>Notes:</span>
+            <textarea name="notes" id="notes"></textarea>
+          </label>
+        </fieldset>
+        <fieldset>
+          <button type="submit">save</button>
+          <button id="cancel">cancel</button>
+        </fieldset>
+      </form>
+    </template>
   </body>
 </html>
