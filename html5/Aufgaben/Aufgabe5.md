@@ -14,7 +14,7 @@ in der index.html: `<script src="node_modules/dexie/dist/dexie.js"></script>`
 
 **oder**
 
-in der model.js: `import Dexie from './node_modules/dexie/dist/dexie.js';`
+in der model.js: `import Dexie from './node_modules/dexie/dist/dexie.mjs';`
 
 dann:
 
