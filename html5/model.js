@@ -1,20 +1,4 @@
 const model = {
-  data: [
-    {
-      id: 1,
-      username: 'test',
-      password: 'p@55w0rD',
-      url: 'https://google.com',
-      notes: "Don't give your password away",
-    },
-    {
-      id: 2,
-      username: 'test1',
-      password: 'p@55w0rD',
-      url: 'https://live.com',
-      notes: "Don't give your password away",
-    },
-  ],
   save(entry) {
     if (entry.id) {
       this.editElement(entry);
@@ -23,21 +7,27 @@ const model = {
     }
   },
   addElement(entry) {
-    entry.id = Math.max(...this.data.map((e) => e.id)) + 1;
-    this.data.push(entry);
+    const entries = this.getAllElements();
+    entry.id =
+      localStorage.length === 0 ? 1 : Math.max(...entries.map((e) => e.id)) + 1;
+    localStorage.setItem(entry.id, JSON.stringify(entry));
   },
   editElement(entry) {
-    const id = this.data.findIndex((e) => e.id === entry.id);
-    this.data[id] = entry;
+    localStorage.setItem(entry.id, JSON.stringify(entry));
   },
   deleteElement(id) {
-    this.data = this.data.filter((element) => element.id !== id);
+    localStorage.removeItem(id);
   },
   getAllElements() {
-    return this.data;
+    return Object.values(localStorage).map((element) => {
+      return JSON.parse(element);
+    });
+  },
+  getOneByIndex(i) {
+    return JSON.parse(localStorage.getItem(localStorage.key(i)));
   },
   getOneById(id) {
-    return this.data.find((element) => element.id === id);
+    return JSON.parse(localStorage.getItem(id));
   },
 };
 
