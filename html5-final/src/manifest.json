@@ -1,0 +1,19 @@
+{
+  "name": "Password Manager",
+  "short_name": "pw",
+  "theme_color": "#2196f3",
+  "background_color": "#2196f3",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "icon.png",
+      "sizes": "192x192"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "jsdays",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -c-1 ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sspringer82/jsdays.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sspringer82/jsdays/issues"
+  },
+  "homepage": "https://github.com/sspringer82/jsdays#readme",
+  "dependencies": {
+    "dexie": "^3.0.3",
+    "http-server": "^0.12.3"
+  }
+}
