@@ -10,6 +10,7 @@
   "author": "Sebastian Springer<sebastian.springer@maibornwolff.de>",
   "license": "ISC",
   "dependencies": {
+    "dexie": "^3.0.3",
     "http-server": "^0.12.3"
   }
 }

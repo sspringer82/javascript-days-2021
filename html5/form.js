@@ -37,8 +37,8 @@ class Form extends HTMLElement {
     return ['id'];
   }
 
-  loadData(id) {
-    const data = model.getOneById(parseInt(id, 10));
+  async loadData(id) {
+    const data = await model.getOneById(parseInt(id, 10));
     for (const [key, value] of Object.entries(data)) {
       this.shadowRoot.getElementById(key).value = value;
     }
@@ -56,8 +56,8 @@ class Form extends HTMLElement {
     }
   }
 
-  save(entry) {
-    model.save(entry);
+  async save(entry) {
+    await model.save(entry);
     const event = new CustomEvent('save');
     this.dispatchEvent(event);
     this.shadowRoot.getElementById('form').reset();

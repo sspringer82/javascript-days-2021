@@ -25,12 +25,14 @@ class List extends HTMLElement {
     }
   }
 
-  buildTable(shadowRoot) {
+  async buildTable(shadowRoot) {
     const tableContainer = shadowRoot.getElementById('list');
     tableContainer.innerHTML = '';
 
     const table = document.createElement('table');
-    model.getAllElements().forEach((rowData) => this.createRow(rowData, table));
+    (await model.getAllElements()).forEach((rowData) =>
+      this.createRow(rowData, table),
+    );
     tableContainer.appendChild(table);
 
     table.addEventListener('click', (e) => {
@@ -76,8 +78,8 @@ class List extends HTMLElement {
     table.appendChild(tr);
   }
 
-  deleteEntry(id, shadowRoot) {
-    model.deleteElement(parseInt(id, 10));
+  async deleteEntry(id, shadowRoot) {
+    await model.deleteElement(parseInt(id, 10));
     this.buildTable(shadowRoot);
   }
 

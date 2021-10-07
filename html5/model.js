@@ -1,3 +1,11 @@
+import Dexie from './node_modules/dexie/dist/dexie.mjs';
+
+const db = new Dexie('pw');
+db.version(1).stores({
+  pw: '++id, username, password, url',
+  secret: '++id',
+});
+
 const model = {
   save(entry) {
     if (entry.id) {
@@ -7,27 +15,20 @@ const model = {
     }
   },
   addElement(entry) {
-    const entries = this.getAllElements();
-    entry.id =
-      localStorage.length === 0 ? 1 : Math.max(...entries.map((e) => e.id)) + 1;
-    localStorage.setItem(entry.id, JSON.stringify(entry));
+    delete entry.id;
+    return db.pw.add(entry);
   },
   editElement(entry) {
-    localStorage.setItem(entry.id, JSON.stringify(entry));
+    return db.pw.update(entry.id, entry);
   },
   deleteElement(id) {
-    localStorage.removeItem(id);
+    return db.pw.delete(id);
   },
   getAllElements() {
-    return Object.values(localStorage).map((element) => {
-      return JSON.parse(element);
-    });
-  },
-  getOneByIndex(i) {
-    return JSON.parse(localStorage.getItem(localStorage.key(i)));
+    return db.pw.toArray();
   },
   getOneById(id) {
-    return JSON.parse(localStorage.getItem(id));
+    return db.pw.get(id);
   },
 };
 

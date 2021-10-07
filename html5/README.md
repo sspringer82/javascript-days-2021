@@ -19,3 +19,8 @@
 - HTML5 Attribute: https://developer.mozilla.org/de/docs/Web/HTML/Element/Input
 - Constraint Validation API: https://developer.mozilla.org/en-US/docs/Web/API/Constraint_validation
 - Lit: https://lit.dev/
+- Workbox: https://developers.google.com/web/tools/workbox
+- Serviceworke.rs: https://serviceworke.rs/
+- MDN Service Worker: https://developer.mozilla.org/de/docs/Web/API/Service_Worker_API
+- Service Workers by Google: https://developers.google.com/web/fundamentals/primers/service-workers
+- Socket.io: https://socket.io/
